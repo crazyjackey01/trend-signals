@@ -4,18 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project layout
 
-Class repo for an agents course. Python, one shared venv and `.env` at the repo root.
+Project for an agents course. Python, one venv and `.env` at the repo root.
 
-- `week-05/` — class exercise: tool calling through OpenRouter (`model_api.py`, `tools.py`).
-- `midterm/` — midterm project (due ~2026-10-26): trend-finding agent + a controlled
-  AI-search manipulation demo. Plan and demo rules are in `midterm/README.md`.
+- `midterm/` — Trend Signals, a fact-based, cited trend-finding app. See `README.md`.
 
 ## Commands
 
 Run from the repo root with the venv (`source .venv/bin/activate`):
 
 ```sh
-pip install -r week-05/requirements.txt          # requests, python-dotenv
+pip install -r midterm/requirements.txt
 python midterm/collect_trends.py [--geo KR --wiki ko]   # general trending searches
 python midterm/topic_trends.py --topic "피지컬 AI"       # trends around one topic
 python midterm/analyze_topic.py --topic "피지컬 AI"      # fact-based, cited explanation (needs .env key)
@@ -72,4 +70,3 @@ was right; results are in midterm/eval/README.md.
   24-hour windows.
 - The page template is bilingual (`STR.ko` / `STR.en`, toggle in the tab bar); new interface
   strings go in both.
-- `midterm/model_api.py` is a copy of week-05's (week-05 is not committed).
